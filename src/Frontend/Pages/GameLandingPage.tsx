@@ -405,7 +405,7 @@ export function GameLandingPage() {
       if (userInput === 'y') {
         setStep(TerminalPromptStep.ASKING_WHITELIST_KEY);
       } else if (userInput === 'n') {
-        setStep(TerminalPromptStep.ASKING_WAITLIST_EMAIL);
+        setStep(TerminalPromptStep.TERMINATED);
       } else {
         terminal.current?.println('Unrecognized input. Please try again.');
         await advanceStateFromAskHasWhitelistKey(terminal);
@@ -417,7 +417,7 @@ export function GameLandingPage() {
   const advanceStateFromAskWhitelistKey = useCallback(
     async (terminal: React.MutableRefObject<TerminalHandle | undefined>) => {
       const address = ethConnection?.getAddress();
-      if (!address) throw new Error('not logged in');
+      if (!address || !ethConnection) throw new Error('not logged in');
 
       terminal.current?.println(
         'Please enter your invite key. (XXXXX-XXXXX-XXXXX-XXXXX-XXXXX)',
@@ -427,26 +427,26 @@ export function GameLandingPage() {
       const key = (await terminal.current?.getInput()) || '';
 
       terminal.current?.print('Processing key... (this may take up to 30s)');
-      const txHash = await callRegisterUntilWhitelisted(key, address, terminal);
       terminal.current?.newline();
 
-      if (!txHash) {
-        terminal.current?.println('ERROR: Not a valid key.', TerminalTextStyle.Red);
-        setStep(TerminalPromptStep.ASKING_WAITLIST_EMAIL);
-      } else {
+      const whitelist = await ethConnection.loadContract(
+        WHITELIST_CONTRACT_ADDRESS,
+        loadWhitelistContract
+      );
+
+      try {
+        const ukReceipt = await whitelist.useKey(key, address);
+        await ukReceipt.wait();
+        
         terminal.current?.print('Successfully joined game. ', TerminalTextStyle.Green);
         terminal.current?.print(`Welcome, player `);
         terminal.current?.println(address, TerminalTextStyle.Text);
-        terminal.current?.print('Sent player $0.15 :) ', TerminalTextStyle.Blue);
-        terminal.current?.printLink(
-          '(View Transaction)',
-          () => {
-            window.open(`${BLOCK_EXPLORER_URL}/${txHash}`);
-          },
-          TerminalTextStyle.Blue
-        );
         terminal.current?.newline();
-        setStep(TerminalPromptStep.ASKING_PLAYER_EMAIL);
+        setStep(TerminalPromptStep.FETCHING_ETH_DATA);
+      }catch (e) {
+        console.error(`error : ${e}`);
+        terminal.current?.println('ERROR: Not a valid key or insufficient balance',TerminalTextStyle.Red);
+        setStep(TerminalPromptStep.TERMINATED);
       }
     },
     [ethConnection]

@@ -36,6 +36,8 @@
     "lodash": "^4.17.15",
     "p-defer": "^3.0.0",
     "p-timeout": "^4.0.0",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
     "preact": "^10.5.13",
     "prismjs": "^1.22.0",
     "react": "^16.9.0",
@@ -54,6 +56,7 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
+    "postinstall": "patch-package",
     "prepare": "tsc --emitDeclarationOnly --declaration --declarationDir ./declarations",
     "test": "exit 0",
     "lint": "eslint .",
