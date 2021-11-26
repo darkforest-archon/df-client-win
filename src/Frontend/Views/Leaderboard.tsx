@@ -43,7 +43,7 @@ function scoreToString(score?: number | null) {
 // component
 function playerToEntry(playerStr: string, color: string) {
   // if this is an address
-  if (playerStr.startsWith('0x') && playerStr.length === 42) {
+  if (playerStr.startsWith('0x') && playerStr.length === 42 || playerStr.endsWith(" Team")) {
     return <TextPreview text={playerStr} focusedWidth={'150px'} unFocusedWidth={'150px'} />;
   }
 
@@ -115,7 +115,7 @@ function LeaderboardTable({ rows }: { rows: Array<[string, number | undefined]> 
 }
 
 // TODO: update this each round, or pull from contract constants
-const roundEndTimestamp = '2021-10-05T04:00:00.000Z';
+const roundEndTimestamp = '2021-11-27T14:00:00.000Z';
 const roundEndTime = new Date(roundEndTimestamp).getTime();
 
 function CountDown() {
@@ -174,18 +174,10 @@ function LeaderboardBody({ leaderboard }: { leaderboard: Leaderboard }) {
         <StatsTable>
           <tbody>
             <tr>
-              <td>round 4 complete</td>
+              <td>Guild W Community Round 1 complete</td>
               <td>
                 <CountDown />
               </td>
-            </tr>
-            <tr>
-              <td>players</td>
-              <td>{leaderboard.entries.length}</td>
-            </tr>
-            <tr>
-              <td>ranked players</td>
-              <td>{rankedPlayers.length}</td>
             </tr>
           </tbody>
         </StatsTable>

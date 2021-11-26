@@ -1,15 +1,15 @@
-import { BLOCK_EXPLORER_URL } from '@darkforest_eth/constants';
-import { WHITELIST_CONTRACT_ADDRESS } from '@darkforest_eth/contracts';
-import { EthConnection, neverResolves, weiToEth } from '@darkforest_eth/network';
-import { address } from '@darkforest_eth/serde';
-import { utils, Wallet } from 'ethers';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import {BLOCK_EXPLORER_URL} from '@darkforest_eth/constants';
+import {WHITELIST_CONTRACT_ADDRESS} from '@darkforest_eth/contracts';
+import {EthConnection, neverResolves, weiToEth} from '@darkforest_eth/network';
+import {address} from '@darkforest_eth/serde';
+import {utils, Wallet} from 'ethers';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {useHistory} from 'react-router-dom';
 import GameManager from '../../Backend/GameLogic/GameManager';
-import GameUIManager, { GameUIManagerEvent } from '../../Backend/GameLogic/GameUIManager';
-import TutorialManager, { TutorialState } from '../../Backend/GameLogic/TutorialManager';
-import { addAccount, getAccounts } from '../../Backend/Network/AccountManager';
-import { getEthConnection, loadWhitelistContract } from '../../Backend/Network/Blockchain';
+import GameUIManager, {GameUIManagerEvent} from '../../Backend/GameLogic/GameUIManager';
+import TutorialManager, {TutorialState} from '../../Backend/GameLogic/TutorialManager';
+import {addAccount, getAccounts} from '../../Backend/Network/AccountManager';
+import {getEthConnection, loadWhitelistContract} from '../../Backend/Network/Blockchain';
 import {
   callRegisterUntilWhitelisted,
   EmailResponse,
@@ -17,20 +17,15 @@ import {
   submitInterestedEmail,
   submitPlayerEmail,
 } from '../../Backend/Network/UtilityServerAPI';
-import {
-  GameWindowWrapper,
-  TerminalToggler,
-  TerminalWrapper,
-  Wrapper,
-} from '../Components/GameLandingPageComponents';
-import { MythicLabelText } from '../Components/Labels/MythicLabel';
-import { TextPreview } from '../Components/TextPreview';
-import { TopLevelDivProvider, UIManagerProvider } from '../Utils/AppHooks';
-import { Incompatibility, unsupportedFeatures } from '../Utils/BrowserChecks';
-import { TerminalTextStyle } from '../Utils/TerminalTypes';
-import UIEmitter, { UIEmitterEvent } from '../Utils/UIEmitter';
-import { GameWindowLayout } from '../Views/GameWindowLayout';
-import { Terminal, TerminalHandle } from '../Views/Terminal';
+import {GameWindowWrapper, TerminalToggler, TerminalWrapper, Wrapper,} from '../Components/GameLandingPageComponents';
+import {MythicLabelText} from '../Components/Labels/MythicLabel';
+import {TextPreview} from '../Components/TextPreview';
+import {TopLevelDivProvider, UIManagerProvider} from '../Utils/AppHooks';
+import {Incompatibility, unsupportedFeatures} from '../Utils/BrowserChecks';
+import {TerminalTextStyle} from '../Utils/TerminalTypes';
+import UIEmitter, {UIEmitterEvent} from '../Utils/UIEmitter';
+import {GameWindowLayout} from '../Views/GameWindowLayout';
+import {Terminal, TerminalHandle} from '../Views/Terminal';
 
 const enum TerminalPromptStep {
   NONE,
@@ -126,7 +121,17 @@ export function GameLandingPage() {
     async (terminal: React.MutableRefObject<TerminalHandle | undefined>) => {
       terminal.current?.newline();
       terminal.current?.newline();
-      terminal.current?.printElement(<MythicLabelText text={`                 Dark Forest`} />);
+      terminal.current?.printElement(<MythicLabelText text={`    Dark Forest Guild W Community Round 1`} />);
+      terminal.current?.newline();
+      terminal.current?.printElement(<MythicLabelText text={`        Ad Astra – RED vs. BLUE Round`} />);
+      terminal.current?.newline();
+      terminal.current?.newline();
+
+      terminal.current?.print('Organizer:', TerminalTextStyle.Sub);
+      terminal.current?.print('Guild W - MarrowDAO', TerminalTextStyle.Text);
+      terminal.current?.newline();
+      terminal.current?.print('Sponsors:', TerminalTextStyle.Sub);
+      terminal.current?.print('Yuanyuzhou Ventures, RhizomeDAO, MatrixWorld, MAODAO', TerminalTextStyle.Text);
       terminal.current?.newline();
       terminal.current?.newline();
 
@@ -216,6 +221,17 @@ export function GameLandingPage() {
 
       terminal.current?.print('    v0.6 r4    ', TerminalTextStyle.Text);
       terminal.current?.print('10/01/2021        ', TerminalTextStyle.Text);
+      terminal.current?.printLink(
+        '@orden_gg',
+        () => {
+          window.open('https://twitter.com/orden_gg');
+        },
+        TerminalTextStyle.Text
+      );
+      terminal.current?.newline();
+
+      terminal.current?.print('    GuildW r1  ', TerminalTextStyle.Text);
+      terminal.current?.print('11/27/2021        ', TerminalTextStyle.Text);
       terminal.current?.print('t.b.d');
       terminal.current?.newline();
       terminal.current?.newline();
