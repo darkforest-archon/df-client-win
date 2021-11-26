@@ -45,7 +45,7 @@ export default function LandingPage() {
               <br />
               <Text>zkSNARK space warfare</Text>
               <br />
-              <Text>Round 4: Society Eggnog - Lightning Round</Text>
+              <Text>Guild W Community Round 1: Ad Astra – RED vs. BLUE Round</Text>
             </p>
 
             <Spacer height={16} />
@@ -159,17 +159,22 @@ export default function LandingPage() {
                   <td>
                     10/01/<HideSmall>20</HideSmall>21
                   </td>
+                  <td>
+                    <Link to='https://twitter.com/orden_gg'>@orden_gg</Link>
+                  </td>
+                </TRow>
+                <TRow>
+                  <td>
+                    Guild W Community Round 1
+                  </td>
+                  <td>
+                    11/27/<HideSmall>20</HideSmall>21
+                  </td>
                   <td>t.b.d</td>
                 </TRow>
               </tbody>
             </table>
           </div>
-
-          <Spacer height={32} />
-
-          <EmailWrapper>
-            <EmailCTA mode={EmailCTAMode.SUBSCRIBE} />
-          </EmailWrapper>
 
           <Spacer height={16} />
 
