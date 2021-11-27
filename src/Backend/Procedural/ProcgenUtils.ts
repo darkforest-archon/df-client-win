@@ -25,6 +25,7 @@ import {
 } from './ProcgenConsts';
 import tracery from './tracery';
 import { baseEngModifiers } from './tracery-modifiers';
+import { SPONSOR_PLANETS } from "../Utils/constants";
 
 export type PixelCoords = {
   x: number;
@@ -407,7 +408,7 @@ export class ProcgenUtils {
   }
 
   public static getPlanetNameHash(locId: LocationId): string {
-    const name = ProcgenUtils.namesById.get(locId);
+    const name = SPONSOR_PLANETS.get(locId) || ProcgenUtils.namesById.get(locId);
     if (name) return name;
 
     let planetName = '';
