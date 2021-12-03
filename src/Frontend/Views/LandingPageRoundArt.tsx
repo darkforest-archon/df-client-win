@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { TwitterLink } from '../Components/Labels/Labels';
 import { Smaller, Text } from '../Components/Text';
 import dfstyles from '../Styles/dfstyles';
+import {Link} from "../Components/CoreUI";
 
 export function LandingPageRoundArt() {
   return (
@@ -10,7 +11,7 @@ export function LandingPageRoundArt() {
       <ImgContainer>
         <LandingPageRoundArtImg src={'/public/round_art/guildw-round1.png'} />
         <Smaller>
-          <Text>Art by</Text> <TwitterLink twitter='fractist_lc' />{' '}
+          <Text>Art by</Text> <Link to='https://twitter.com/PLAZAES1'>@PLAZAES</Link>{' '}
         </Smaller>
       </ImgContainer>
     </Container>

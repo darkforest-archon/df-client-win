@@ -89,7 +89,7 @@ function LeaderboardTable({ rows }: { rows: Array<[string, number | undefined]> 
         alignments={['r', 'l', 'r']}
         headers={[
           <Cell key='place'>place</Cell>,
-          <Cell key='player'>player</Cell>,
+          <Cell key='player'>team</Cell>,
           <Cell key='score'>score</Cell>,
         ]}
         rows={rows}
@@ -115,7 +115,7 @@ function LeaderboardTable({ rows }: { rows: Array<[string, number | undefined]> 
 }
 
 // TODO: update this each round, or pull from contract constants
-const roundEndTimestamp = '2021-11-27T14:00:00.000Z';
+const roundEndTimestamp = '2021-12-05T08:00:00.000Z';
 const roundEndTime = new Date(roundEndTimestamp).getTime();
 
 function CountDown() {

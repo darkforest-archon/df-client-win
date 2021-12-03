@@ -123,15 +123,25 @@ export function GameLandingPage() {
       terminal.current?.newline();
       terminal.current?.printElement(<MythicLabelText text={`    Dark Forest Guild W Community Round 1`} />);
       terminal.current?.newline();
-      terminal.current?.printElement(<MythicLabelText text={`        Ad Astra – RED vs. BLUE Round`} />);
+      terminal.current?.printElement(<MythicLabelText text={`     For Pioneers  – RED vs. BLUE Round`} />);
       terminal.current?.newline();
       terminal.current?.newline();
 
       terminal.current?.print('Organizer:', TerminalTextStyle.Sub);
-      terminal.current?.print('Guild W - MarrowDAO', TerminalTextStyle.Text);
       terminal.current?.newline();
-      terminal.current?.print('Sponsors:', TerminalTextStyle.Sub);
-      terminal.current?.print('Yuanyuzhou Ventures, RhizomeDAO, MatrixWorld, MAODAO', TerminalTextStyle.Text);
+      terminal.current?.print('Guild W - MarrowDAO, RhizomeDAO', TerminalTextStyle.Text);
+      terminal.current?.newline();
+      terminal.current?.print('Supporters:', TerminalTextStyle.Sub);
+      terminal.current?.newline();
+      terminal.current?.print('0XPARC, Dark Forest Team, DFDAO, ORDEN GAMEFI DAO', TerminalTextStyle.Text);
+      terminal.current?.print('Dragonfly Capital, Yuanyuzhou Ventures', TerminalTextStyle.Text);
+      terminal.current?.print('Evernew Capital, IOSG Ventures, EM3DAO', TerminalTextStyle.Text);
+      terminal.current?.print('Mirror, RSS3, Mask Network', TerminalTextStyle.Text);
+      terminal.current?.print('Blocto, Impossible Finance', TerminalTextStyle.Text);
+      terminal.current?.print('Matrix World, 01a1, Mao Dao, Mirror World', TerminalTextStyle.Text);
+      terminal.current?.print('Metaverse Advertisement DAO', TerminalTextStyle.Text);
+      terminal.current?.print('ChainNews, BlockBeats, Odaily, Grenade, Crypto Wesearch', TerminalTextStyle.Text);
+      terminal.current?.print('Real Satoshi, DAppChaser, 8848', TerminalTextStyle.Text);
       terminal.current?.newline();
       terminal.current?.newline();
 
@@ -231,7 +241,7 @@ export function GameLandingPage() {
       terminal.current?.newline();
 
       terminal.current?.print('    GuildW r1  ', TerminalTextStyle.Text);
-      terminal.current?.print('11/27/2021        ', TerminalTextStyle.Text);
+      terminal.current?.print('12/03/2021        ', TerminalTextStyle.Text);
       terminal.current?.print('t.b.d');
       terminal.current?.newline();
       terminal.current?.newline();
