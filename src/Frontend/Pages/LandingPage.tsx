@@ -17,11 +17,12 @@ export const enum LandingPageZIndex {
 }
 
 const links = {
-  twitter: 'http://twitter.com/darkforest_eth',
-  email: 'mailto:contact@zkga.me',
+  twitter: 'https://twitter.com/marrowdao',
+  mirror: 'buidl.mirror.com',
+  email: 'mailto:contact@guildw.xyz',
   blog: 'https://blog.zkga.me/',
-  discord: 'https://discord.gg/2u2TN6v8r6',
-  github: 'https://github.com/darkforest-eth',
+  discord: 'https://discord.gg/rtdjfXtqh6',
+  github: 'ttps://github.com/guild-w',
 };
 
 export default function LandingPage() {
@@ -45,7 +46,7 @@ export default function LandingPage() {
               <br />
               <Text>zkSNARK space warfare</Text>
               <br />
-              <Text>Guild W Community Round 1: Ad Astra – RED vs. BLUE Round</Text>
+              <Text>Guild W Community Round 1: For Pioneers – RED vs. BLUE Round</Text>
             </p>
 
             <Spacer height={16} />
@@ -168,7 +169,7 @@ export default function LandingPage() {
                     Guild W Community Round 1
                   </td>
                   <td>
-                    11/27/<HideSmall>20</HideSmall>21
+                    12/03/<HideSmall>20</HideSmall>21
                   </td>
                   <td>t.b.d</td>
                 </TRow>
@@ -180,11 +181,11 @@ export default function LandingPage() {
 
           <VariousLinksContainer>
             <TextLinks>
-              <a href={links.email}>email</a>
+              <a href={links.blog}>blog</a>
               <Spacer width={4} />
               <Sub>-</Sub>
               <Spacer width={8} />
-              <a href={links.blog}>blog</a>
+              <a href={links.mirror}>mirror</a>
             </TextLinks>
 
             <Spacer width={8} />

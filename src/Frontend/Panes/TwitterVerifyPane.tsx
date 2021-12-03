@@ -28,8 +28,8 @@ export function TwitterVerifyPane({ hook }: { hook: ModalHook }) {
   const onTweetClick = async () => {
     if (uiManager) {
       const tweetText = await uiManager.generateVerificationTweet(twitterHandleInputValue);
-      const str = `Verifying my @darkforest_eth v0.6 account (https://zkga.me): ${tweetText}`;
-      window.open(`https://twitter.com/intent/tweet?hashtags=darkforest&text=${encodeURI(str)}`);
+      const str = `Verifying my @darkforest_eth @marrowdao community round 1 account (https://guildw.xyz): ${tweetText}`;
+      window.open(`https://twitter.com/intent/tweet?hashtags=darkforest,guildw&text=${encodeURI(str)}`);
     }
   };
 
