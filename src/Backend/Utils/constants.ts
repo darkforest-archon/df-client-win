@@ -1,7 +1,7 @@
 import { LocationId } from "@darkforest_eth/types";
 
-export const DAO_A_CONTRACT_ADDRESS = "0xA4f33bf0911Cad687c71961CCF029a00FF93C765";
-export const DAO_B_CONTRACT_ADDRESS = "0xC6c98b76A56B9F8d6952068Db173181EDEc1dc61";
+export const DAO_A_CONTRACT_ADDRESS = "0x62c4Ba6d70F9a4186f28ce169aEd46201D5B92Ab";
+export const DAO_B_CONTRACT_ADDRESS = "0xfD431F575AFab4b1a295D430F919987a0e6c33C1";
 
 export const SUPPORTER_PLANETS = new  Map<LocationId, string>();
 
