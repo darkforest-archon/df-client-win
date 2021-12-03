@@ -71,7 +71,7 @@ export function GameLandingPage() {
     getEthConnection()
       .then((ethConnection) => setEthConnection(ethConnection))
       .catch((e) => {
-        alert('error connecting to blockchain');
+        // alert('error connecting to blockchain');
         console.log(e);
       });
   }, []);

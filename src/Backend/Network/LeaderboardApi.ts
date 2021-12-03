@@ -34,7 +34,7 @@ export async function loadLeaderboard(): Promise<Leaderboard> {
       };
     })
       .catch((e) => {
-        alert('error connecting to blockchain');
+        // alert('error connecting to blockchain');
         throw e;
       });
 }

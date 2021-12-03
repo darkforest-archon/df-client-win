@@ -244,7 +244,7 @@ export class ContractsAPI extends EventEmitter {
           coreContract.filters.ArtifactActivated(null, null, null).topics,
           coreContract.filters.ArtifactDeactivated(null, null, null).topics,
           coreContract.filters.ArtifactDeposited(null, null, null).topics,
-          coreContract.filters.ArtifactFound(null, null, null).topics,
+          coreContract.filters.ArtifactFound(null, null, null, null, null).topics,
           coreContract.filters.ArtifactWithdrawn(null, null, null).topics,
           coreContract.filters.LocationRevealed(null, null).topics,
           coreContract.filters.PlanetHatBought(null, null, null).topics,
