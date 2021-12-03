@@ -115,7 +115,7 @@ function LeaderboardTable({ rows }: { rows: Array<[string, number | undefined]> 
 }
 
 // TODO: update this each round, or pull from contract constants
-const roundEndTimestamp = '2021-12-05T08:00:00.000Z';
+const roundEndTimestamp = '2021-12-05T16:00:00.000Z';
 const roundEndTime = new Date(roundEndTimestamp).getTime();
 
 function CountDown() {
