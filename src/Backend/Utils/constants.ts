@@ -1,16 +1,17 @@
 import { LocationId } from "@darkforest_eth/types";
 
-export const DAO_A_CONTRACT_ADDRESS = "0xEcC8572e9ffCA02Aba6f89D127541b0984a6B511";
-export const DAO_B_CONTRACT_ADDRESS = "0x27E0053f853dB33588D18030e79aCECd52C8bfC4";
+export const DAO_A_CONTRACT_ADDRESS = "0xA4f33bf0911Cad687c71961CCF029a00FF93C765";
+export const DAO_B_CONTRACT_ADDRESS = "0xC6c98b76A56B9F8d6952068Db173181EDEc1dc61";
 
 export const SUPPORTER_PLANETS = new  Map<LocationId, string>();
 
 SUPPORTER_PLANETS.set('24c847757dac247a9791028bf24a13a0858700e2b58c2f2d8698c79915bd934b' as LocationId, 'RhizomeDAO');
 SUPPORTER_PLANETS.set('16bdeae3b6585073a0958d1f64ee5bc8bd22dce981938b6c784aed573985d8bd' as LocationId, 'DFDAO');
 SUPPORTER_PLANETS.set('c5126ddd2989f8b720629806044a886a17d8ca4dd6b15efb2fc46f5e9f2b3f7' as LocationId, 'ORDEN GG');
-// SPONSOR_PLANETS.set('' as LocationId, 'Dragonfly Capital');
-// SPONSOR_PLANETS.set('' as LocationId, 'Yuanyuzhou Ventures');
-// SPONSOR_PLANETS.set('' as LocationId, 'Evernew Capital');
+SUPPORTER_PLANETS.set('2950ce632e37ba55345b5322c77d2f6114b8aae085f8db5adfa496910e86aa86' as LocationId, 'Dragonfly Capital');
+SUPPORTER_PLANETS.set('21e4e855bd669b13f059ad2525789ea4c5a8a75f66534962e7744712a2b43f94' as LocationId, 'Yuanyuzhou Ventures');
+SUPPORTER_PLANETS.set('27a563317c28f726155eee168c6c7bc116ee34b8ba807b1d99dfa5b6a90f1372' as LocationId, 'Yuanyuzhou Ventures');
+SUPPORTER_PLANETS.set('6d62118c96d49b500f3a79dbd04171c2a296d42ae3f3a62057e73ff35e2d7a3' as LocationId, 'Evernew Capital');
 SUPPORTER_PLANETS.set('2bccf53cc3a616d9c23142512c0a31418595fc138dccd218c42b13537131d5f6' as LocationId, 'EM3DAO');
 SUPPORTER_PLANETS.set('1fa207ec2e9b91784faae2a72c32bebadd3e15b0ea2a4cd4a63ff16600d66c68' as LocationId, 'EM3DAO');
 SUPPORTER_PLANETS.set('1973d7461e194c450bf990de9705ff268e67768a5b67d9ff9d687f5d16912b85' as LocationId, 'IOSG Ventures');
@@ -28,14 +29,26 @@ SUPPORTER_PLANETS.set('20f415d6ca4543a0ba103455575a5908e005cdb78af4aec6ec614a750
 SUPPORTER_PLANETS.set('2fbf0983d1ca0c38caac56ace54e8e679be76ed37a9965ca7d458d2f75146655' as LocationId, 'RSS3');
 SUPPORTER_PLANETS.set('bb84fe68cf0f4d7f17149135e5173dc21610231eb885bcd5a589b465946a498' as LocationId, 'RSS3');
 SUPPORTER_PLANETS.set('174161850697e0a57b9e82cd0f4f51c873b8945fe3958929188f0ae217963c21' as LocationId, 'Mask');
-// SPONSOR_PLANETS.set('' as LocationId, 'Real Satoshi ');
-// SPONSOR_PLANETS.set('' as LocationId, 'RPC NFT');
-// SPONSOR_PLANETS.set('' as LocationId, 'Mirror World');
-// SPONSOR_PLANETS.set('' as LocationId, 'Blocto');
-// SPONSOR_PLANETS.set('' as LocationId, 'Impossible Finance');
-// SPONSOR_PLANETS.set('' as LocationId, 'Matrix World');
-// SPONSOR_PLANETS.set('' as LocationId, 'DAppChaser');
-// SPONSOR_PLANETS.set('' as LocationId, '01a1');
+SUPPORTER_PLANETS.set('12bfdaee3759a01b66f6521f7d23e87bcbf2be9e0d9412a19ad263c975f057f8' as LocationId, 'Real Satoshi');
+SUPPORTER_PLANETS.set('50db173023b47ad81aed6ff35fcd758a0d83af32e2847b571e9f04ce72c232' as LocationId, 'RPC NFT');
+SUPPORTER_PLANETS.set('168a931355d4af535a4ef6e5be8d002d73f5fc921caa021b784d0f3632fec9e5' as LocationId, 'Mirror World');
+SUPPORTER_PLANETS.set('1f4a3f5670e482b1a97abbe229ebf3e0bda2665f2ef3cb372b947ce4fe2fcdf4' as LocationId, 'Mirror World');
+SUPPORTER_PLANETS.set('103339799802fe067a1ecf2a8f968789ef0a57dc33285635c8289b895c5420c1' as LocationId, 'Mirror World');
+SUPPORTER_PLANETS.set('1061f801c90851e970f0e7edfea8513831b785447bf0d0c2d251e4168083bf62' as LocationId, 'Blocto');
+SUPPORTER_PLANETS.set('15168e681d8e6ed5e549b76853b33d1b3bfa7d1f34736501207047d308b1f337' as LocationId, 'Impossible Finance');
+SUPPORTER_PLANETS.set('2354937aee365a2bf561b67a6fb30ac2cb60d45b15bde6576af581f4db33c2c2' as LocationId, 'Matrix World');
+SUPPORTER_PLANETS.set('3034c58bf3a7ee3afcf6cb885be1d0686cb87acf203fbfb78bb24d0de6e8942e' as LocationId, 'DAppChaser');
+SUPPORTER_PLANETS.set('10f064a651deea42e36792d899ea8b1a3fc0f4d3fa7cce5c7519d6c9c8c94309' as LocationId, '01a1');
+
+SUPPORTER_PLANETS.set('2f8834819f22ed54b4aad88bc608f534e0359f268b286813c109609036db04ea' as LocationId, 'Mirror');
+SUPPORTER_PLANETS.set('4d43b8707c9321bf9c8e04875f21a64d94255b7f08bb4fd9d7655e6968d3e6f' as LocationId, 'Metaaverse Advertisement DAO');
+SUPPORTER_PLANETS.set('957dd8478bf4f2331e4acf5f8473b09ef0a416bb88446802380f06dfd9f4507' as LocationId, 'ChainNews');
+SUPPORTER_PLANETS.set('11dac7442e8ccd26d89b0c6f8ae95ef23e6a92075736777486597efbcdd793d9' as LocationId, 'BlockBeats');
+SUPPORTER_PLANETS.set('586e40a9e46b85aae2ef859824c11d31882218b1a5664b9048c5b097efe5386' as LocationId, 'Odaily');
+SUPPORTER_PLANETS.set('1790341070230590fb346e19d5a297090eaf26cbb46e3024331d48cbb4c017d7' as LocationId, 'Grenade');
+SUPPORTER_PLANETS.set('eedb0f785fccb92503d91e4df6f3c047c1de7f886101b36c54e33987af0c349' as LocationId, 'Crypto Wesearch');
+SUPPORTER_PLANETS.set('20dfd67687644b4eaf3943449ad7a60fc91d5533adff68a944a15d8c61555405' as LocationId, 'Mirror Curator DAO');
+SUPPORTER_PLANETS.set('243fd62043d102a9dea33656aa40152dc0818cc9a89c16efc988326ec6243372' as LocationId, '8848');
 
 SUPPORTER_PLANETS.set('2bbb8081ba38d9705fb37189e25835b6ea8944483bcffb6482e65c51cc08c7e4' as LocationId, '0xPARC');
 SUPPORTER_PLANETS.set('15c8bf3b7e491ab14e05efeb6bff51daf781242305d876803828092f07f74de2' as LocationId, 'Three Body');
