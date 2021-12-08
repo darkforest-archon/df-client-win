@@ -1,4 +1,3 @@
-import { weiToEth } from '@darkforest_eth/network';
 import {
   Artifact,
   ArtifactId,
@@ -25,8 +24,6 @@ export interface InitialGameState {
   contractConstants: ContractConstants;
   players: Map<string, Player>;
   worldRadius: number;
-  gptCreditPriceEther: number;
-  myGPTCredits: number;
   allTouchedPlanetIds: LocationId[];
   allRevealedCoords: RevealedCoords[];
   allClaimedCoords?: ClaimedCoords[];
@@ -36,7 +33,6 @@ export interface InitialGameState {
   myArtifacts: Artifact[];
   heldArtifacts: Artifact[][];
   loadedPlanets: LocationId[];
-  balance: number;
   revealedCoordsMap: Map<LocationId, RevealedCoords>;
   claimedCoordsMap?: Map<LocationId, ClaimedCoords>;
   planetVoyageIdMap: Map<LocationId, VoyageId[]>;
@@ -87,9 +83,6 @@ export class InitialGameStateDownloader {
 
     const contractConstants = contractsAPI.getConstants();
     const worldRadius = contractsAPI.getWorldRadius();
-    const gptCreditPriceEther = contractsAPI.getGPTCreditPriceEther();
-    const myGPTCredits = contractsAPI.getGPTCreditBalance(contractsAPI.getAccount());
-    const balance = contractsAPI.getBalance();
 
     const players = contractsAPI.getPlayers(playersLoadingBar);
 
@@ -181,8 +174,6 @@ export class InitialGameStateDownloader {
       contractConstants: await contractConstants,
       players: await players,
       worldRadius: await worldRadius,
-      gptCreditPriceEther: await gptCreditPriceEther,
-      myGPTCredits: await myGPTCredits,
       allTouchedPlanetIds,
       allRevealedCoords,
       pendingMoves,
@@ -191,7 +182,6 @@ export class InitialGameStateDownloader {
       myArtifacts: await myArtifacts,
       heldArtifacts: await heldArtifacts,
       loadedPlanets: planetsToLoad,
-      balance: weiToEth(await balance),
       revealedCoordsMap,
       claimedCoordsMap,
       planetVoyageIdMap,
