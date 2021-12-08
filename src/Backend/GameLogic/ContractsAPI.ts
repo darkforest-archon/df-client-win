@@ -195,7 +195,6 @@ export class ContractsAPI extends EventEmitter {
     ) {
       return '10';
     }
-    return '100';
     return getSetting(this.ethConnection.getAddress(), Setting.GasFeeGwei);
   }
 
