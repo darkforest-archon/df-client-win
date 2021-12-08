@@ -32,7 +32,7 @@ yarn start:prod
 
 ## Modification Description
 
-This is a fork of official [darkforest-eth/client](https://github.com/darkforest-eth/client) (commit 3d216fa88eba07cafcc083b15401e5662e04bf98), with some modifications were made to adapt to the Windows environment:
+This is a fork of official [darkforest-eth/client](https://github.com/darkforest-eth/client) (commit 3d216fa88eba07cafcc083b15401e5662e04bf98), with some modifications made to adapt to the Windows environment:
 
 ```diff
 diff --git a/package.json b/package.json
